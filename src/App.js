@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="App">
       <h1>가계부 프로젝트</h1>
-      <h3>조수희 배워라 </h3>
       <Form updateHousehold={() => { }} />
       <Memory />
 
