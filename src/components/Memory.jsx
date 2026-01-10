@@ -11,7 +11,7 @@ const Memory = () => {
     }, [items]);
 
 
-    if (items.length <= 1) {
+    if (items.length <= 0) {
         return <h3>기록이 없습니다.</h3>
     }
 

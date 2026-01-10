@@ -5,60 +5,10 @@ export function loadItems() {
         const saved = localStorage.getItem("items");
         return saved ? JSON.parse(saved) :
             [
-                {
-                    "Date": "2026-01-04",
-                    "Amount": 100000,
-                    "Category": "Donation",
-                },
-                {
-                    "Date": "2026-01-05",
-                    "Amount": 200000,
-                    "Category": "Regular",
-                },
-                {
-                    "Date": "2026-01-06",
-                    "Amount": 100000,
-                    "Category": "familyEvent",
-                },
-                {
-                    "Date": "2026-01-07",
-                    "Amount": 400000,
-                    "Category": "ETC",
-                },
-                {
-                    "Date": "2026-01-08",
-                    "Amount": 1000000,
-                    "Category": "Plus",
-                },
             ];
     }
     catch {
         return [
-            {
-                "Date": "2026-01-04",
-                "Amount": 100000,
-                "Category": "Donation",
-            },
-            {
-                "Date": "2026-01-05",
-                "Amount": 200000,
-                "Category": "Regular",
-            },
-            {
-                "Date": "2026-01-06",
-                "Amount": 100000,
-                "Category": "familyEvent",
-            },
-            {
-                "Date": "2026-01-07",
-                "Amount": 400000,
-                "Category": "ETC",
-            },
-            {
-                "Date": "2026-01-08",
-                "Amount": 1000000,
-                "Category": "Plus",
-            },
         ];
     }
 
