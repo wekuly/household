@@ -3,19 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { AppContext } from './store/AppContext';
-import { loadInitialData } from './bootstrap';
+import { AppContextProvider } from "./store/AppContext";
+import { loadItems } from './bootstrap';
 
 
 // 🔥 React 실행 전에 로컬스토리지 읽음
-const initialData = loadInitialData();
+const initialItems = loadItems();
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppContext.Provider value={initialData}>
+    <AppContextProvider initialItems={initialItems}>
       <App />
-    </AppContext.Provider>
+    </AppContextProvider>
   </React.StrictMode>
 );
 

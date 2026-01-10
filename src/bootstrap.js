@@ -1,37 +1,66 @@
-export function loadInitialData() {
+export function loadItems() {
 
     //더미데이터로 임시로 추가
-    const user = [
-        {
-            "Money": 0,  // 총 금액
-        },
-        {
-            "Date": "2026-01-04",
-            "Amount": 100000,
-            "Category": "Donation",
-        },
-        {
-            "Date": "2026-01-05",
-            "Amount": 200000,
-            "Category": "Regular",
-        },
-        {
-            "Date": "2026-01-06",
-            "Amount": 100000,
-            "Category": "familyEvent",
-        },
-        {
-            "Date": "2026-01-07",
-            "Amount": 400000,
-            "Category": "ETC",
-        },
-        {
-            "Date": "2026-01-08",
-            "Amount": 1000000,
-            "Category": "Plus",
-        },
-    ];
-
+    try {
+        const saved = localStorage.getItem("items");
+        return saved ? JSON.parse(saved) :
+            [
+                {
+                    "Date": "2026-01-04",
+                    "Amount": 100000,
+                    "Category": "Donation",
+                },
+                {
+                    "Date": "2026-01-05",
+                    "Amount": 200000,
+                    "Category": "Regular",
+                },
+                {
+                    "Date": "2026-01-06",
+                    "Amount": 100000,
+                    "Category": "familyEvent",
+                },
+                {
+                    "Date": "2026-01-07",
+                    "Amount": 400000,
+                    "Category": "ETC",
+                },
+                {
+                    "Date": "2026-01-08",
+                    "Amount": 1000000,
+                    "Category": "Plus",
+                },
+            ];
+    }
+    catch {
+        return [
+            {
+                "Date": "2026-01-04",
+                "Amount": 100000,
+                "Category": "Donation",
+            },
+            {
+                "Date": "2026-01-05",
+                "Amount": 200000,
+                "Category": "Regular",
+            },
+            {
+                "Date": "2026-01-06",
+                "Amount": 100000,
+                "Category": "familyEvent",
+            },
+            {
+                "Date": "2026-01-07",
+                "Amount": 400000,
+                "Category": "ETC",
+            },
+            {
+                "Date": "2026-01-08",
+                "Amount": 1000000,
+                "Category": "Plus",
+            },
+        ];
+    }
 
     // const user = JSON.parse(localStorage.getItem("user")) || [];
     /*
@@ -50,8 +79,4 @@ export function loadInitialData() {
     ]
 
     */
-
-    return {
-        user,
-    };
 }

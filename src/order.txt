@@ -1,0 +1,11 @@
+라이브서버 실행 : npm start
+
+깃에 올리기 : 
+git init
+git add .
+git commit -m "이름"
+git push
+
+깃 페이지 업데이트 :
+npm run build
+npm run deploy
